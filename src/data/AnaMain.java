@@ -14,7 +14,7 @@ import java.util.List;
 import au.com.bytecode.opencsv.CSVReader;
 
 public class AnaMain {
-	public static final int ANA_BEGIN = 601314;
+	public static final int ANA_BEGIN = 601700;
 	public static final int ANA_END = 602000;
 	public static final int DATE_INDEX = 0;
 	public static final int END_PRICE_INDEX = 4;
@@ -25,7 +25,7 @@ public class AnaMain {
 			try {
 				List<Double> prices = new ArrayList<Double>();
 				List<Date> dates = new ArrayList<Date>();
-				CSVReader csvReader = new CSVReader(new FileReader(new File("d:\\stock\\" + i + ".csv")), ',');
+				CSVReader csvReader = new CSVReader(new FileReader(new File("d:\\stock\\origin\\" + i + ".csv")), ',');
 				try {
 					String[] line = csvReader.readNext();
 					while ((line = csvReader.readNext()) != null) {

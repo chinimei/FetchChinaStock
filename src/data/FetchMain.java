@@ -11,8 +11,8 @@ import java.net.URLConnection;
 
 public class FetchMain {
 
-	public static final int STOCK_COUNT_BEGIN = 600318;
-	public static final int STOCK_COUNT_TOTAL = 602000;
+	public static final int STOCK_COUNT_BEGIN = 601314;
+	public static final int STOCK_COUNT_TOTAL = 601350;
 	public static final int BUFFER_SIZE = 8192;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
@@ -25,7 +25,7 @@ public class FetchMain {
 			BufferedOutputStream os = null;
 			try {
 				is = new BufferedInputStream(con.getInputStream());
-				os = new BufferedOutputStream(new FileOutputStream("d:\\stock\\" + i + ".csv"), BUFFER_SIZE);
+				os = new BufferedOutputStream(new FileOutputStream("d:\\stock\\origin\\" + i + ".csv"), BUFFER_SIZE);
 				System.out.println("begin download " + i);
 				final byte data[] = new byte[BUFFER_SIZE];
 				int count;
